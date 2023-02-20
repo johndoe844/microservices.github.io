@@ -1,0 +1,289 @@
+
+.btn-new, 
+.btn-edit,
+.btn-delete {
+	position: fixed;
+	width: 50px;
+	height: 50px;
+	bottom: 50px;
+	right: 50px;
+	box-shadow: 0 0 20px 5px #bbb;
+	border-radius: 100%;
+	background: #fff;
+	z-index: 997;
+	transition: 0.2s;
+	cursor: pointer;
+}
+
+.btn-edit {
+	bottom: 115px;
+}
+
+.btn-edit,
+.btn-delete {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 18px;
+}
+
+.btn-new:hover, 
+.btn-edit:hover,
+.btn-delete:hover {
+	background: #9370f7;
+}
+
+.btn-new:after,
+.btn-new:before {
+	content: "";
+	position: absolute;
+	display: block;
+	background: #9370f7;
+	border-radius: 4px;
+	transition: 0.5s;
+}
+
+.btn-new:after {
+	width: 4px;
+	height: 30px;
+	left: 23px;
+	top: 10px;
+}
+
+.btn-new:before {
+	width: 30px;
+	height: 4px;
+	left: 10px;
+	top: 23px;
+}
+
+.btn-new:hover.btn-new:before,
+.btn-new:hover.btn-new:after {
+	background: #fff;
+}
+
+.course-form.show,
+.module-form.show,
+.warning.show {
+	opacity: 1;
+	visibility: visible;
+}
+
+.module-form .form, 
+.course-form .form,
+.warning .form {
+	padding: 50px;
+	padding-bottom: 15px;
+	border-radius: 5px;
+	background: #fff;
+	width: 700px;
+	display: flex;
+	flex-direction: column;
+}
+
+.module-form .form h2,
+.course-form .form h2,
+.warning h2 {
+	font-size: 2em;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+
+.course-form .form .label {
+	font-weight: bold;
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+
+.module-form .form > input,
+.course-form .form > input,
+.course-form .form > textarea {
+	border: 0;
+	outline:none;
+	font-size: 16px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #bbb;
+	margin-bottom: 20px;
+	resize: none;
+}
+
+.course-form .form .scope {
+	margin-bottom: 10px;
+}
+
+.course-form .form .scope > div {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: #eee;
+	padding: 10px 15px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	transition: 0.05s;
+}
+
+.course-form .form .scope > div:hover {
+	cursor: pointer;
+	box-shadow: 0 0 5px 0px #aaa;
+}
+
+.course-form .form .scope > div.checked {
+	cursor: pointer;
+	box-shadow: 0 0 5px 0px #aaa;
+}
+
+.course-form .form .scope > div > input {
+	cursor: pointer;
+	margin-right: 10px;
+	pointer-events: none;
+}
+
+.course-form .form .scope > div > input[type=checkbox] {
+	opacity: 0;
+	position: absolute;
+	left: -9999px;
+}
+
+.course-form .form .scope > div > p {
+	position: relative;
+	margin-left: 25px;
+}
+
+.course-form .form .scope > div > p:before {
+	content: "";
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+
+	width: 16px;
+	height: 16px;
+	font-size: 18px;
+
+	color: #b6269f;
+
+	margin-right: 10px;
+	position: absolute;
+	left: -25px;
+	top: 0;
+	background-color: #fff;
+	box-shadow: 0 0 3px 0px #aaa;
+
+	transition: 0.5s;
+}
+
+.course-form .form .scope > div.checked > p:before,
+.module-form .form .scope > div.checked > p:before {
+	content: "✔️";
+}
+
+.module-form .form .scope > div > p,
+.course-form .form .scope > div > p {
+	font-size: 14px;
+	pointer-events: none;
+}
+
+.module-form .btn-block,
+.course-form .btn-block,
+.warning .btn-block {
+	margin-top: 15px;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.course-form .btn-block div,
+.module-form .btn-block div,
+.warning .btn-block div {
+	width: 49%;
+	background: #eee;
+	border-radius: 5px;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	padding: 10px 0;
+	transition: 0.2s;
+}
+
+.course-form .btn-block .create,
+.module-form .btn-block .create,
+.warning .btn-block .create {
+	background: #4bb34b;
+	color: #fff;
+	border: 2px solid #4bb34b;
+}
+
+.course-form .btn-block .create:hover,
+.module-form .btn-block .create:hover,
+.warning .btn-block .create:hover {
+	color: #4bb34b;
+	background: #fff;
+	border: 2px solid #4bb34b;
+}
+
+.course-form .btn-block .cancel,
+.module-form .btn-block .cancel,
+.warning .btn-block .cancel {
+	color: #888;
+	border: 2px solid #eee;
+}
+
+.course-form .btn-block .cancel:hover,
+.module-form .btn-block .cancel:hover,
+.warning .btn-block .cancel:hover {
+	color: #333;
+}
+
+.course-form,
+.module-form,
+.warning {
+	position: fixed;
+	background: rgba(0,0,0,0.75);
+	z-index: 998;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.5s;
+	opacity: 0;
+	visibility: hidden;
+}
+
+main.course .modules-body .add-module {
+	padding: 15px;
+	border-radius: 5px;
+	margin: 10px 0;
+	transition: 0.1s;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #4bb34b;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+	transition: 0.1s;
+	border: 2px solid #4bb34b;
+}
+
+main.course .modules-body .add-module:hover {
+	background: #fff;
+	color: #4bb34b;
+}
+
+.warning .btn-block .create {
+	border: 2px solid #f44133;
+	background: #f44133;
+}
+
+.warning .btn-block .create:hover {
+	color: #f44133;
+	border: 2px solid #f44133;
+}

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Интернет-платформа онлайн-курсов "study buddy"</title>
+
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">
+	<meta http-equiv="pragma" content="no-cache">
+
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="minireset_min.css">
+</head>
+<body>
+
+	<header>
+		<nav>
+			<h2 onclick="home();"><p>study</p><p>buddy 👀</p></h2>
+			<div class="icon">
+				<p class="logo">s</p><p>
+				</p><p class="username">Система управления обучением "StudyBuddy"</p>
+				<span>👨‍🎓</span>
+			</div>
+			<a href="https://gitflic.ru/project/fejoti9742/professional-software-practice" class="logout">ИСХОДНЫЙ КОД  👨‍💻</a>
+		</nav>
+	</header>
+
+	<main>
+
+	<div class="about">
+
+		<h1 class="_anim_on_scroll">Система управления образовательным процессом "StudyBuddy" 🚀</h1>
+		<p class="_anim_on_scroll">StuddyBuddy — маленький шаг в новой эре, который позволит преподавателям и студентам объединить силы для достижения новых горизонтов познания!</p>
+		<div class="_anim_on_scroll links">
+			<a href="#course-section" class="scroll-to course-link">Микросервис "Курсы"</a>
+			<a href="#test-section" class="scroll-to test-link">Микросервис "Тесты"</a>
+		</div>
+
+	</div>
+
+	<div id="test-section" class="form test">
+		<div class="column _anim_on_scroll">
+			<img src="https://static.vecteezy.com/system/resources/previews/001/925/918/original/e-learning-concept-free-vector.jpg" alt="">
+			<div class="row">
+				<div class="btn-block">
+					<a href="https://gitflic.ru/project/fejoti9742/professional-software-practice/file?file=tests" class="btn">ИСХОДНЫЙ КОД МОДУЛЯ "ТЕСТЫ" ✨</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="column _anim_on_scroll first">
+			<h2>Микросервис "Тесты"</h2>
+			<p class="description"><span><i>Описание: </i></span>этот микросервис предоставит платформу для тестирования, с помощью которой преподаватели смогут создавать тесты, а учащиеся — проходить их. Он предоставит преподавателям простой в использовании интерфейс для создания тестов, управления доступными тестами и проверки успеваемости студентов. Микросервис также предоставит студентам безопасную платформу для прохождения тестов, гарантируя, что только авторизованные студенты будут иметь доступ к тестам. С помощью этого микросервиса преподаватели смогут эффективно создавать тесты и управлять ими, а студенты смогут легко получать к ним доступ и выполнять их.</p>
+		</div>
+
+	</div>
+
+	<div id="course-section" class="form">
+		<div class="column _anim_on_scroll first">
+			<h2>Микросервис "Курсы"</h2>
+			<p class="description"><span><i>Описание: </i></span> этот микросервис курсов позволит преподавателям создавать комплексные курсы по широкому кругу тем и дисциплин. Преподаватели смогут создавать темы, уроки, задания, тесты и прикреплять вложения к каждому курсу. Кроме того, любой авторизованный студент, у которого есть ссылка на этот курс, может записаться на него. Этот микросервис предоставит удобную платформу для взаимодействия преподавателей и студентов, в то же время обеспечив безопасность контента курса. Он предоставит преподавателям эффективный способ создания курсов и управления ими, а учащиеся смогут легко получать доступ к содержимому курса и проходить его.</p>
+		</div>
+		<div class="column _anim_on_scroll">
+			<img src="img.png" alt="">
+			<div class="row">
+				<div class="btn-block">
+					<a href="https://gitflic.ru/project/fejoti9742/professional-software-practice/file?file=course" class="btn">ИСХОДНЫЙ КОД МОДУЛЯ "КУРСЫ" ✨</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	</main>
+
+	<footer>
+		<p>Донецк, 2023</p>
+	</footer>
+
+	<style>
+
+		body {
+			overflow-X: hidden;
+		}
+
+		main {
+			width: auto;
+			margin: 0; 
+			padding-bottom: 100px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.links {
+			margin-top: 35px;
+		}
+
+		.links > a {
+			border-radius: 5px;
+			background: #9370f7;
+			color: #eee;
+			padding: 9px 22px;
+			cursor: pointer;
+			border: 2px solid #9370f7;
+			transition: 0.2s;
+		}
+
+		.links > a:hover {
+			background: #eee;
+			color: #9370f7;
+		}
+
+		.about {
+			height: 100vh;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background: #eee;
+		}
+
+		.about > * {
+			width: 60%;
+			text-align: center;
+			transition: 1.5s;
+			transform: translateY(50px);
+			opacity: 0;
+		}
+
+		.about > *._active_anim_on_scroll {
+			transform: translateY(0);
+			opacity: 1;
+		}
+
+		.about p {
+			line-height: 1.5;
+			font-size: 1.2em;
+		}
+
+		.about h1 {
+			font-size: 3em;
+			margin-bottom: 30px;
+		}
+
+		.form {
+			width: 80%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			min-height: 100vh;
+		}
+
+		.form.test {
+			margin-bottom: 100px;
+		}
+
+		.column {
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
+			flex-direction: column;
+			width: 45%;
+			height: 460px;
+			transition: 2s;
+		}
+
+		.column.first {
+			box-shadow: 0 0 20px 5px #bbb;
+			padding: 30px;
+			margin-right: 20px;
+			border-radius: 5px;
+		}
+
+		.column:last-child {
+			align-items: flex-end;
+			margin-left: 20px;
+			transform: translateX(150%);
+			opacity: 0;
+		} 
+
+		.column:first-child {
+			align-items: flex-end;
+			margin-left: 20px;
+			transform: translateX(-150%);
+			opacity: 0;
+		} 
+
+		.column._active_anim_on_scroll {
+			opacity: 1;
+			transform: translateX(0);
+		}
+
+		img {
+			width: 1300px;
+		}
+
+		.form h2 {
+			width: 100%;
+			text-align: center;
+			font-size: 2.75em;
+			line-height: 1;
+			margin-bottom: 30px;
+		}
+
+		.description {
+			text-align: justify;
+			line-height: 1.5;
+		}
+
+		p span {
+			font-weight: bold;
+		}
+
+		p {
+			margin-bottom: 10px;
+		}
+
+		.btn-block {
+			width: 100%;
+			display: flex;
+			justify-content: flex-end;
+			margin-top: 50px;
+		}
+
+		.btn {
+			padding: 10px 15px;
+			background: #9370f7;
+			color: #fff;
+			margin-left: 30px;
+			border-radius: 5px;
+			transition: 0.2s;
+			border: 2px solid #9370f7;
+			cursor: pointer;
+		}
+
+		.btn:hover {
+			background: #fff;
+			color: #9370f7;
+		}
+
+		input {
+			border: 0;
+			outline:none;
+			font-size: 16px;
+			padding-bottom: 10px;
+			border-bottom: 1px solid #bbb;
+			resize: none;
+		}
+	</style>
+
+	<script src="animations.js"></script>
+
+</body>
+</html>
